@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+	//声明一个变量data(对象)，对象里有两个对象user address
+		let data={
+			user:{
+				name:"WangZhongXiang",
+				age:"24",
+				sex:"male",
+				hobbies:"girls","games",""
+			},
+			address:{
+				city:"NingBo"
+			}
+		};
+	//构造函数observer,设置一个(对象)参数。里面有一个属性data 调用函数walk	
+		function Observer(data){
+			this.data=data;
+			this.walk(data)
+		}
+	// 声明一个变量p，为Observer的原型对象。
+		let p=Observer.prototype;
+		
+	//原型对象上有个walk函数
+		p.walk=function(obj){
+			let val;
+			//遍历每个对象的属性，for in 会把原型对象上的属性也会遍历到
+			for(let key in obj){
+				//所依用if语句和hasOwnProperty方法确认是不是自身的属性，如果是就调用函数convert
+				if(obj.hasOwnProperty(key)){
+					val=obj[key];
+					//如果不是自身属性而是原型对象上的则继续深入调用函数
+					if (typeof val === 'object'){
+						new Observer(val);
+					}
+					this.convert(key,val);
+				}
+				
+			}
+		};
+
+		p.convert=function(key,val){
+			Object.defineProperty(this.data,key,{
+				enumerable:true,
+				configurable:true,//这两个属性默认为true。
+				get:function(){
+					console.log('你访问了'+key);//访问时会调用函数
+				return val	
+				},
+				set:function(newVal){
+					console.log('你设置了'+key);
+					console.log('新的'+key+'='+newVal)//设置时会调用函数
+					if(newVal===val)return;
+					val=newVal
+				}
+			})
+		};
+		let app=new Observer(data);
+		//参考链接 https://github.com/youngwind/blog/issues/84
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
