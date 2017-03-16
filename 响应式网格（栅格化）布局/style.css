@@ -7,7 +7,12 @@
     border:1px solid #999;
     padding: 10px;
 }
-
+.box {
+    height: 50px;
+    border: 1px solid #999;
+    background: #eee;
+    margin: 20px;
+}
 .row::before,.row::after{
     content:" ";
     display: table;
