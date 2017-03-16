@@ -11,7 +11,7 @@
     height: 50px;
     border: 1px solid #999;
     background: #eee;
-    margin: 20px;
+    margin: 10px;
 }
 .row::before,.row::after{
     content:" ";
