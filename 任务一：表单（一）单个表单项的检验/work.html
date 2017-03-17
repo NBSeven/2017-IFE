@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		input{
+			margin:0 20px;
+			border-radius: 5px;
+			border:1px solid grey;
+		}
+		#btn{
+			background:#2f79ba;
+			border-radius: 5px;
+			color: #fff;
+			height: 30px;
+			width: 50px;
+		}
+		#tip{
+			color: grey;
+			text-indent: 50px;
+		}
+	</style>
+	<script>
+		window.onload=function(){
+		var name=document.getElementById("name");
+		var tip=document.getElementById("tip");
+		var btn=document.getElementById("btn");
+		name.onfocus=function(){
+			
+		}
+		//离开焦点时，判断是长度是否为0；
+		name.onblur=function(){
+			tip.style.color="grey";
+			tip.innerHTML="必填，长度为4~16字符";
+			if(name.value.length==0){
+				tip.style.color="red";
+				tip.innerHTML="姓名不能为空";
+				name.style.borderColor="red";
+			}
+		}
+		//按钮点击执行函数，声明变量并赋值length=0；
+		btn.onclick=function(){
+			var length=0;
+			console.log(typeof name.value);
+			//遍历每个字符做出判断，如果字符为中文那么长度+2否则+1；
+			for(var i=0;i<name.value.length;i++){
+				if(name.value.charCodeAt(i)>127||name.value.charCodeAt(i)==94){
+					length+=2
+				}else{
+					length++
+				}
+			}
+			//当字符长度>=4且<=16时判断正确，否则不正确。
+			if(length>=4&&length<=16){
+				console.log(length)
+				tip.innerHTML="名称格式正确";
+				name.style.borderColor="green";
+				tip.style.color="green";
+			}else{
+				console.log(length);
+				tip.innerHTML="名称格式不正确";
+				tip.style.color="red";
+				name.style.borderColor="red";
+			}
+			
+		}
+	}
+
+
+	</script>
+</head>
+<body>
+	<form action="">
+		名称<input type="text" id="name"><input type="button" value="验证" id="btn">
+		<div id="tip">必填，长度为4~16字符</div>
+	</form>
+
+</body>
+</html>
