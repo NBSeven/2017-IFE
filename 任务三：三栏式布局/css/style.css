@@ -1,0 +1,62 @@
+*{
+	margin:0;
+	padding: 0;
+}
+/*float方法无法使中间的自适应宽度，用了flex发现可以*/
+.container{
+	width: 90%;
+	border: 1px solid #999999;
+	margin:0 auto;
+	background: #eeeeee;
+	overflow: hidden;
+	display: flex;
+	flex-direction: row;
+	/*justify-content 这个属性可以让元素分布位置发生变化*/
+	justify-content:space-between;
+	padding: 20px;
+}
+.left{
+	width: 160px;
+	height: 90px;
+	padding: 20px;
+	border: 1px solid #999999;
+	background: #fff;
+}
+.team_logo{
+	height: 80px;
+	width: 80px;
+	background: #eeeeee;
+	border: 1px solid #999999;
+}
+
+.center{
+	height: 400px;
+	margin-left: 20px;
+	margin-right: 20px;
+	/*width: 600px;*/
+	background: #fff;
+	border:1px solid #999999;
+	/*margin-top: 20px;*/
+}
+/*高度自适应所以要设定高度*/
+/*这里其实也可以用flex垂直排列*/
+.right{
+	width: 120px;
+	height: 428px;
+	background: #fff;
+	border: 1px solid #999999;
+	
+}
+
+.logo_personal{
+	height: 80px;
+	width: 80px;
+	margin:0 auto;
+	background: #eeeeee;
+	border: 1px solid #999999;
+	margin:20px 20px 0 20px;
+}
+/*这样可有可无*/
+.logo_personal:last-child{
+	/*margin-bottom:20px;*/
+}
