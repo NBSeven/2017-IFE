@@ -9,22 +9,16 @@
 			padding: 0;
 		}
 
-		.container{
-			width: 1000px;
-			height: 800px;
-			border: 1px solid #999999;
-			position:relative;
-
-		}
+		
 		.center{
-			width: 40%;
+			width: 400px;
 			height: 200px;
 			background: #ccc;
-			position: relative;
-			top:50%;
-			left: 50%;
-			margin-left: -200px;
-			margin-top: -100px;
+			position: absolute;
+			top:calc(50%-100px);
+			left:calc(50%-200px);
+/* 			margin-left: -200px;
+			margin-top: -100px; */
 		}
 		[class*=yellow]{
 			width: 50px;
@@ -45,12 +39,10 @@
 	</style>
 </head>
 <body>
-	<!-- 自适应还有些问题，ab 和 re定位了解 -->
-	<div class="container">
-		<div class="center">
-			<div class="yellow_left"></div>
-			<div class="yellow_right"></div>
-		</div>
+	
+	<div class="center">
+		<div class="yellow_left"></div>
+		<div class="yellow_right"></div>
 	</div>
 </body>
 </html>
