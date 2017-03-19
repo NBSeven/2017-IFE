@@ -1,0 +1,144 @@
+*{
+	margin:0;
+	padding: 0;
+}
+
+body{
+	background-color: #dedede;
+}
+nav a{
+	color: #fff;
+	text-decoration: none;
+	line-height: 80px;
+}
+
+header{
+	height: 80px;
+	background-color: #333;	
+}
+header>nav{
+	position: relative;
+	float: right;
+}
+header>nav li{
+	position: relative;
+	float: left;
+	margin-right: 20px;
+}
+.section{
+	background-color: #fff;
+	margin:20px;
+	width: 70%;
+	overflow: hidden;
+	position: relative;
+	left: 0px;
+	border: 1px solid #cdcdcd;
+	box-shadow: 1px 1px 1px #9f9f9f;
+}
+h2{
+	margin:40px 20px 20px ;
+}
+h3{
+	margin:0 20px 20px;
+	color: #676769;
+}
+.author{
+	margin:0 20px 20px;
+	color: #676769;
+	display: block;
+}
+p{
+	text-indent: 20px;
+	margin-bottom: 20px;
+}
+
+img{
+	margin:0 20px 20px ;
+}
+.partTwo>ul{
+	margin:0px 0px 30px 30px ;
+	list-style: none;
+}
+#partThree dl{
+	width: 100px;
+	height:100px;
+	border: 1px solid grey;
+	margin-left: 40px;
+	margin-bottom: 20px;
+	float: left;
+}
+#partThree dd>img{
+	width: 75px;
+	height: 60px;
+	margin:5px auto;
+
+}
+#partThree dd{
+	font-size: 14px;
+	text-align: center;
+	line-height: 25px;
+}
+#partFour dl{
+	margin: 20px 40px;
+}
+table{
+	width: 95%;
+	margin:0 0 20px 20px;
+	height: 200px;
+	border:solid #cccccc; border-width:1px 0px 0px 1px;
+}
+table th{
+	color: #fff;
+	background-color: #333333;
+}
+
+table td{border:solid #cccccc; border-width:0px 1px 1px 0px;}
+
+.tdlast{
+	font-weight: bold;
+	background-color: #cccccc
+}
+
+form{
+	margin: 20px 0px 20px 40px;
+	line-height: 40px;
+	font-size: 18px;
+
+}
+
+textarea{
+	width: 200px;
+	height: 100px;
+}
+
+.submit{
+	display: block;
+	width: 90%;
+	font-size: 20px;
+	height: 50px;
+	margin:20px auto;
+	text-align: center;
+	line-height: 50px;
+	background-color: #3355d0;
+	border-radius: 10px;
+	color: #fff;
+}
+footer{
+	height: 80px;
+	background-color: #333;
+	text-align: center;
+	line-height: 80px;
+	color: #fff;
+}
+.section_form{
+	background-color: #fff;
+	margin:20px;
+	width: 500px;
+	overflow: hidden;
+	position: absolute;
+	right: 0px;
+	top:80px;
+	border: 1px solid #cdcdcd;
+	box-shadow: 1px 1px 1px #9f9f9f;
+	
+}
