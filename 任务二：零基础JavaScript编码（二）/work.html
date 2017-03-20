@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 01</title>
+  </head>
+<body>
+
+  <h3>污染城市列表</h3>
+  <ul id="aqi-list">
+<!--   
+    <li>第一名：福州（样例），10</li>
+      <li>第二名：福州（样例），10</li> -->
+  </ul>
+
+<script type="text/javascript">
+
+var aqiData = [
+  ["北京", 90],
+  ["上海", 70],
+  ["福州", 10],
+  ["广州", 80],
+  ["成都", 90],
+  ["西安", 100]
+];
+//网页加载时运行匿名函数
+(function () {
+	//创建一个空数组用来存储大于60的数组
+	var list=[];
+	for(var i=0;i<aqiData.length;i++){
+		if(aqiData[i][1]>60){
+			list.push(aqiData[i])
+		}
+	}
+	//针对新数组进行排序,用sort方法对每个数组的第二个数的大小进行排序
+	list.sort(function(a,b){
+		return a[1]-b[1]
+	})
+	console.log(list);
+	//获取ul
+	var myList=document.getElementById("aqi-list");
+	//对排序好的数组进行遍历，每遍历一次就创建一个li元素并且append到ul下，最后在innerHTML输入数组的内容
+	for(var j=1;j<list.length+1;j++){
+		var Li_item=document.createElement("li");
+		myList.appendChild(Li_item);
+		Li_item.innerHTML="第"+j+"名："+list[j-1];
+	}
+})();
+
+</script>
+</body>
+</html>
