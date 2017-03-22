@@ -282,5 +282,12 @@
 	top:-70px;
 	color: #d45d5c;
 	font-size: 12px;
-
+}
+.qianduantext{
+	position: relative;
+	top:-420px;
+	left: 460px;
+}
+.qianduantext li{
+	font-size: 15px;
 }
