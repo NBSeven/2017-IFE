@@ -1,0 +1,157 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Microsoft YaHei"
+}
+section{
+	width: 90%;
+	margin: auto ;
+}
+ul{
+	list-style: none;
+}
+.titlebar{
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-between;
+	height: 60px;
+	background-color: #91d4da;
+	color: #fff;
+	font-size: 1.2rem;
+}
+.none{
+	color: #91d4da;
+}
+.nav ul{
+	display: flex;
+	flex-flow: row wrap;
+}
+.nav ul li{
+	flex: 1;
+	text-align: center;
+	height: 60px;
+	line-height: 60px;
+	font-size: 1.2rem;
+}
+.active{
+	border-bottom: 3px solid #91d4da;
+}
+banner>img{
+	width: 100%;
+}
+.label{
+	display: flex;
+	flex-flow: row wrap;
+	margin: auto;
+	width: 90%;
+	height: 90px;
+	border-bottom: 5px solid #f5f5f5;
+}
+.label dl{
+	flex:1;
+	text-align: center;
+}
+.label dl dt img{
+	/*display: block;	*/
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+}
+.subnav{
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+	margin: 20px auto;
+	width: 90%;
+}
+.subnav li{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.subnav li:nth-child(2){
+	border-left: 2px solid #f5f5f5;
+	border-right: 2px solid #f5f5f5;
+}
+.subnav li img{
+	width: 70%;
+}
+.boundary{
+	height: 20px;
+	background-color: #f5f5f5;
+	margin: 10px 0;
+}
+.thinline{
+	height: 5px;
+	background-color: #f5f5f5;
+	margin: 10px 0;
+}
+.firstTitle{
+	font-size: 25px;
+}
+.wenanContainer{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+.wenanContainer li {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 30%;
+	text-align: center;
+}
+.wenanContainer li img{
+	margin: 10px 0;
+	width: 80%;
+}
+.wenan{
+	margin: 10px;
+	height: 40px;
+	line-height: 40px;
+	background-color: #f5f5f5;
+}
+.secondTitle{
+	font-size: 25px;
+}
+.article{
+	display: flex;
+	flex-flow: row wrap;
+	border-bottom: 5px solid #f5f5f5;
+}
+.article img{
+	display: block;
+	margin: 10px;
+	width:200px;
+	height: 150px;
+}
+.articleText{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 10px;
+}
+.articleTitle{
+	font-size: 25px;
+}
+.anotherArticle ul{
+	display: flex;
+	flex-flow: row ;
+	justify-content: space-between;
+	align-items: center;
+}
+.anotherArticle ul img{
+	display: block;
+	width: 95%;
+	margin: 10px auto;
+}
+.articleTime{
+	color: #c3c3c3;
+}
+footer{
+	height: 60px;
+	background-color: #f5f5f5;
+}
