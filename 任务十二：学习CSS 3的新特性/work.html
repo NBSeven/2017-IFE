@@ -16,9 +16,9 @@
 	<input type="text" class="input">
 	<div class="swiper">
 		<div class="imgcontainer" id="imgcontainer">
-			<img src="	" alt="">
-			<img src="	" alt="">
-			<img src="	" alt="">
+			<img src="	" alt="" class="firstimg">
+			<img src="	" alt="" class="secondimg">
+			<img src="	" alt="" class="thirdimg">
 		</div>
 		<div class="container">
 			<div class="number" id="one">1</div> 
@@ -30,10 +30,9 @@
 		var tb=document.getElementById("tb");
 		var tr=document.getElementsByTagName("tr");
 		var imgcontainer=document.getElementById("imgcontainer");
-		// 点击的暂未完成。
-		// var one=document.getElementById("one");
-		// var two=document.getElementById("two");
-		// var three=document.getElementById("three");
+		var one=document.getElementById("one");
+		var two=document.getElementById("two");
+		var three=document.getElementById("three");
 		for(var i=1;i<11;i++){
 			var tbtr=document.createElement("tr");
 			tbtr.innerHTML="<td>"+i+"."+"</td>"+"<td>"+"百度前端技术学院"+"</td>"+"<td>"+(14000-i*1000)+"</td>";
@@ -41,6 +40,19 @@
 		}
 		for(var j=1;j<4;j++){
 			tr[j].style.color="red";
+		}
+		// 还是有些小bug.
+		one.onclick=function(){
+			imgcontainer.setAttribute("class","imgcontainerone");
+			setTimeout("imgcontainer.setAttribute('class','imgcontainer')",2000)
+		}
+		two.onclick=function(){
+			imgcontainer.setAttribute("class","imgcontainertwo");
+			setTimeout("imgcontainer.setAttribute('class','imgcontainer')",2000)
+		}
+		three.onclick=function(){
+			imgcontainer.setAttribute("class","imgcontainerthree");
+			setTimeout("imgcontainer.setAttribute('class','imgcontainer')",2000)
 		}
 	</script>
 </body>
