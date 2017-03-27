@@ -14,7 +14,8 @@ window.onload=function(){
 	      }
 	    }
 	  }
-	}
+	};
+	
 	// 声明变量,获取容器
 	var container=document.getElementById("container");
 	// 当左侧入被点击时执行函数
@@ -47,7 +48,7 @@ window.onload=function(){
 				e.className="leftIn";
 			},800)
 			// 进行排序
-			sort(conChildNodes)
+			// sort(conChildNodes)
 			}
 			else{
 				alert("请输入大于10，小于100的数")
@@ -81,7 +82,7 @@ window.onload=function(){
 				setTimeout(function(){
 					e.className="rightIn";
 				},800)
-				sort(conChildNodes);
+				// sort(conChildNodes);
 			}else{
 				alert("请输入大于10，小于100的数")
 			}
@@ -91,5 +92,17 @@ window.onload=function(){
 		alert(container.lastChild.style.height);
 		container.lastChild.className="rightOut";
 		setTimeout(function(){container.removeChild(container.lastChild)},1200)
+	}
+	document.getElementById("paixu").onclick=function(){
+		var conChildNodes=container.childNodes;
+		sort(conChildNodes);
+	}
+	document.getElementById("suiji").onclick=function(){
+		for(var i=0;i<20;i++){
+			var ndiv=document.createElement("div");
+			ndiv.setAttribute('class','suiji');
+			ndiv.style.height=Math.floor(Math.random()*90+10)+"px";
+			container.appendChild(ndiv);
+		}
 	}
 }
