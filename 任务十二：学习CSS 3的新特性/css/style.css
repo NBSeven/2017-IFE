@@ -1,0 +1,67 @@
+
+#tb tr:nth-child(odd){
+	background-color: grey;
+}
+#tb tr:nth-child(1){
+	background-color: black;
+	color: #fff;
+}
+.swiper{
+	position: relative;
+	width: 200px;
+	height: 150px;
+	overflow: hidden;
+}
+.input{
+	
+	margin: 40px;
+	transition: all .8s;
+}
+.input:focus{
+	 transform: scale(1.5);
+}
+.imgcontainer{
+	width:400%;
+	height: 150px;
+	position: relative;
+	animation: imgmove 4.5s infinite;
+}
+
+.imgcontainer img{
+	width: 200px;
+	height: 150px;
+	transition: all 1s;
+}
+.imgcontainer img:nth-child(1){
+	background-color: green;
+}
+.imgcontainer img:nth-child(2){
+	background-color: blue;
+}
+.imgcontainer img:nth-child(3){
+	background-color: red;
+}
+.container{
+	display: flex;
+	flex-flow: row nowrap;
+	position: absolute;
+	left: 85px;
+	top:105px;	
+}
+.number{
+	height: 30px;
+	width: 30px;
+	color: #fff;
+	background-color: grey;
+	text-align: center;
+	line-height: 30px;
+	margin-left: 5px;
+	cursor: pointer;
+}
+@keyframes imgmove
+{
+	0% {left:0px;}
+	25%{left: -210px;}
+	50%{left: -420px;}
+	100%{left: 0px;}
+}

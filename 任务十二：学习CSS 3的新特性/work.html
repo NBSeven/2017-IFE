@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<table id="tb">
+		<tr>
+			<th>排名</th>
+			<th>网站</th>
+			<th>热度</th>
+		</tr>
+	</table>
+	<input type="text" class="input">
+	<div class="swiper">
+		<div class="imgcontainer" id="imgcontainer">
+			<img src="	" alt="">
+			<img src="	" alt="">
+			<img src="	" alt="">
+		</div>
+		<div class="container">
+			<div class="number" id="one">1</div> 
+			<div class="number" id="two">2</div> 
+			<div class="number" id="three">3</div>
+		</div>
+	</div>
+	<script>
+		var tb=document.getElementById("tb");
+		var tr=document.getElementsByTagName("tr");
+		var imgcontainer=document.getElementById("imgcontainer");
+		// 点击的暂未完成。
+		// var one=document.getElementById("one");
+		// var two=document.getElementById("two");
+		// var three=document.getElementById("three");
+		for(var i=1;i<11;i++){
+			var tbtr=document.createElement("tr");
+			tbtr.innerHTML="<td>"+i+"."+"</td>"+"<td>"+"百度前端技术学院"+"</td>"+"<td>"+(14000-i*1000)+"</td>";
+			tb.appendChild(tbtr);
+		}
+		for(var j=1;j<4;j++){
+			tr[j].style.color="red";
+		}
+	</script>
+</body>
+</html>
