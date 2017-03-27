@@ -1,0 +1,47 @@
+#container{
+	margin-top:20px;
+	height: 100px;
+	overflow: hidden;
+}
+.leftIn{
+	transform: translateX(0);
+	display: inline-block;
+	margin-left: 5px;
+	width: 15px;
+	background-color: red;
+	transition: all 2s;
+	color: #fff;
+	position: relative;
+	opacity: 1;
+}
+.leftOut{
+	transform: translateX(-50px);
+	display: inline-block;
+	margin-left: 5px;
+	background-color: red;
+	transition: all 2s;
+	color: #fff;
+	position: relative;
+	opacity: 0;
+}
+.rightOut{
+	transform: translateX(50px);
+	display: inline-block;
+	margin-left: 5px;
+	background-color: red;
+	transition: all 2s;
+	color: #fff;
+	position: relative;
+	opacity: 0;	
+}
+.rightIn{
+	transform: translateX(0);
+	display: inline-block;
+	margin-left: 5px;
+	width: 15px;
+	background-color: red;
+	transition: all 2s;
+	color: #fff;
+	position: relative;
+	opacity: 1;	
+}
