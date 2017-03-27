@@ -26,20 +26,42 @@
 	position: relative;
 	animation: imgmove 4.5s infinite;
 }
+.imgcontainerone{
+	width:400%;
+	height: 150px;
+	position: relative;
+	transition: all 1s;
+	transform: translate(0,0);
+}
+.imgcontainertwo{
+	width:400%;
+	height: 150px;
+	position: relative;
+	transition: all 1s;
+	transform: translate(-210px,0);
+}
+.imgcontainerthree{
+	width:400%;
+	height: 150px;
+	position: relative;
+	transition: all 1s;
+	transform: translate(-420px,0);
+}
 
-.imgcontainer img{
+.firstimg{
+	background-color: green;
 	width: 200px;
 	height: 150px;
-	transition: all 1s;
 }
-.imgcontainer img:nth-child(1){
-	background-color: green;
-}
-.imgcontainer img:nth-child(2){
+.secondimg{
 	background-color: blue;
+	width: 200px;
+	height: 150px;
 }
-.imgcontainer img:nth-child(3){
+.thirdimg{
 	background-color: red;
+	width: 200px;
+	height: 150px;
 }
 .container{
 	display: flex;
