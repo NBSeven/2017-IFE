@@ -3,6 +3,16 @@
 	height: 100px;
 	overflow: hidden;
 }
+
+.suiji{
+	display: inline-block;
+	margin-left: 5px;
+	width: 15px;
+	background-color: red;
+	transition: all 2s;
+	color: #fff;
+	position: relative;
+}
 .leftIn{
 	transform: translateX(0);
 	display: inline-block;
