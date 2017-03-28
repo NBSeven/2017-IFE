@@ -33,7 +33,7 @@ window.onload=function(){
 			// 创造一个div元素
 			var e=document.createElement("div");
 			// 添加子节点
-			container.appendChild(e);
+			container.insertBefore(e,container.firstChild);
 			// 给子节点添加监听器 点击函数
 			e.addEventListener("click",function(){
 				e.remove();
