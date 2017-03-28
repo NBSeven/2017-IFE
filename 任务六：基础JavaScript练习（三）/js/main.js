@@ -5,7 +5,7 @@ window.onload=function(){
 	document.getElementById("leftIn").onclick=function(){
 	// 创造一个div节点
 	var e=document.createElement("div");
-		container.appendChild(e);
+		container.insertBefore(e,container.firstChild);
 		//同时添加一个监听器，点击删除自己
 		e.addEventListener("click",function(){
 			e.remove();
