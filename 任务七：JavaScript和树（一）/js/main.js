@@ -1,84 +1,74 @@
 window.onload=function(){
-	var wrap = document.querySelector(".wrap");
-	var btn_wrap = document.querySelector(".btn-wrap");
-	var btn1 = btn_wrap.querySelectorAll("button")[0];
-	var btn2 = btn_wrap.querySelectorAll("button")[1];
-	var btn3 = btn_wrap.querySelectorAll("button")[2];
-	var arr = [];
-	var last;
-	var toggle = false;
-	//给按钮绑定事件
-	btn1.onclick = function(){
-	    if(!toggle){
-	        toggle = true;
-	        reset();
-	        preOrder(wrap);
-	        showWay();
-	    }
+	// 定义一个数组用来存放排好序的子元素，来进行循环变色
+	var childLists=[];
+	// 定义一个定时器
+	var timer=null;
+	// 点击事件
+	$("#preButton").onclick=function(){
+		restColor();
+		preOrder($("#tree"));
+		changeColor();
 	}
-	btn2.onclick = function(){
-	    if(!toggle){
-	        toggle = true;
-	        reset();
-	        inOrder(wrap);
-	        showWay();
-	    }
+	$("#inButton").onclick=function(){
+		restColor();
+		inOrder($("#tree"));
+		changeColor();
 	}
-	btn3.onclick = function(){
-	    if(!toggle){
-	        toggle = true;
-	        reset();
-	        postOrder(wrap);
-	        showWay();
-	    }
+	$("#postButton").onclick=function(){
+		restColor();
+		preOrder($("#tree"));
+		changeColor();
 	}
-	//二叉树的遍历的三种方式
-	//(1)前序遍历（DLR
+	// 选择器
+	function $(id){
+		return document.querySelector(id);
+	}
+	// 初始化
+	function restColor(){
+		clearInterval(timer)/*清除定时器*/
+		// for (var j=0;j<childLists.length;j++){
+		// 	childLists[j].style.backgroundColor="#fff";
+		// }
+		childLists=[];/*清空数组*/
+	}
+	// 先序遍历
 	function preOrder(node){
-	    if(node){
-	        arr.push(node);
-	        preOrder(node.firstElementChild);
-	        preOrder(node.lastElementChild);
-	    }
+		if(!(node==null)){
+			childLists.push(node);
+			preOrder(node.firstElementChild);
+			preOrder(node.lastElementChild);
+		}
 	}
-	//(2)中序遍历（LDR）
+	// 中序遍历
 	function inOrder(node){
-	    if(node){
-	        inOrder(node.firstElementChild);
-	        arr.push(node);
-	        inOrder(node.lastElementChild);
-	    }
+		if(!(node==null)){
+			inOrder(node.firstElementChild);
+			childLists.push(node);
+			inOrder(node.lastElementChild);
+		}
 	}
-	//(3)后序遍历（LRD）
+	//后序遍历
 	function postOrder(node){
-	    if(node){
-	        postOrder(node.firstElementChild);
-	        postOrder(node.lastElementChild);
-	        arr.push(node);
-	    }
+		if(!(node==null)){
+			postOrder(node.firstElementChild);
+			postOrder(node.lastElementChild);
+			childLists.push(node);
+		}
 	}
-	//显示遍历的过程
-	function showWay(){
-	    for(var i=0; i<arr.length; i++){
-	        setTimeout(function(i){
-	            return function(){
-	                if(i == arr.length-1){
-	                    toggle = false;
-	                }
-	                if(last){
-	                    last.style.background = "white";
-	                }
-	                arr[i].style.background = "red";
-	                last = arr[i];
-	            }
-	        }(i),i*1000)
-	    }
-	}
-	//初始化
-	function reset(){
-	    arr = [];
-	    if(last){
-	        last.style.background = "white";
-	    }
+	//改变颜色
+	function changeColor(){
+		var i=0;
+		timer=setInterval(function(){
+			if(i<childLists.length){
+				if(i>0){
+					childLists[i-1].style.backgroundColor="#fff";
+				}
+				childLists[i].style.backgroundColor="red";
+			}else{
+				clearInterval(timer);
+				childLists[i-1].style.backgroundColor="#fff";
+			}
+			i++;
+		},500)
 	}
 }
