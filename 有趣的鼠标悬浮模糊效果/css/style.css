@@ -1,0 +1,128 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-size: 0;
+	font-family: "Microsoft YaHei";
+}
+body{
+	display: flex;
+	height: 100vh;
+	width: 100vw;
+	justify-content: center;
+	align-items:center;
+	background-color: #CD2626;
+}
+.container{
+	position: relative;
+}
+.img{
+	width: 50vw;
+	height: 45vh;
+	background-image: url("../img/zhanshen.jpg");
+	background-repeat:no-repeat;
+	background-size:100%;
+	box-shadow: 8px 8px 3px #030303;
+}
+@keyframes streamer {
+    0%  {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}
+.text{
+	font-size: 28px;
+	font-weight: bold;
+	transition:all 1s;
+	text-align: center;
+	opacity: 0;
+	background-image: -webkit-linear-gradient(left, blue, red 25%, blue 50%, red 75%, blue 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent; 
+	background-size: 200% 100%;
+	animation: streamer 5s infinite linear;
+}
+.text>a{
+	font-size: 16px;
+	font-weight: normal;
+	cursor: pointer;
+	z-index: 999999;
+}
+.container:hover .img{
+	filter: blur(5px);
+}
+.container:hover .text{
+	transform: translate(0,-25vh);
+	opacity: 1;
+}
+.one{
+	width: 50vw;
+	height: 0vh;
+	position: absolute;
+	top:80px;
+	border-left: 3px solid #fff;
+	border-right: 3px solid #fff;
+	transition: all 1s;
+	transform: scale(.7);
+	z-index: 2;
+	opacity: 0;
+}
+.container:hover .one{
+	height:20vh;
+	width:50vw;
+	opacity: 1;
+}
+.two{
+	width: 50vw;
+	height: 0vh;
+	position: absolute;
+	bottom: 117px;
+	border-left: 3px solid #fff;
+	border-right: 3px solid #fff;
+	transition: all 1s;
+	transform: scale(.7);
+	z-index: 2;
+	opacity: 0;
+}
+.container:hover .two{
+	height:20vh;
+	width:50vw;
+	opacity: 1;
+}
+.three{
+	width: 0vw;
+	height: 20vh;
+	position: absolute;
+	top:80px;
+	left:100px;
+	border-top: 3px solid #fff;
+	/*border-bottom: 3px solid #fff;*/
+	transition: all 1s;
+	transform: scale(.7);
+	z-index: 2;
+	opacity: 0;
+}
+.container:hover .three{
+	height:20vh;
+	width:50vw;
+	opacity: 1;
+}
+.four{
+	width: 0vw;
+	height: 20vh;
+	position: absolute;
+	bottom: 117px;
+	right:100px;
+	/*border-top: 3px solid #fff;*/
+	border-bottom: 3px solid #fff;
+	transition: all 1s;
+	transform: scale(.7);
+	z-index: 2;
+	opacity: 0;
+}
+.container:hover .four{
+	height:20vh;
+	width:50vw;
+	opacity: 1;
+}
