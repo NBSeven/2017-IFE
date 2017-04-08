@@ -17,7 +17,7 @@ window.onload=function(){
 		gol=0,
 		got=0;
 	//声明向左 向右 向上 向下的距离；
-	var gleft=0,
+	var     gleft=0,
 		gright=0,
 		gtop=0,
 		gbottom=0;	
@@ -26,9 +26,9 @@ window.onload=function(){
 		return document.querySelector(a);
 	}
 	var lbutton=$("#left"),
-		rbutton=$("#right"),
-		bbutton=$("#back");
-		gbutton=$("#go");
+	    rbutton=$("#right"),
+	    bbutton=$("#back"),
+	    gbutton=$("#go");
 	lbutton.onclick=function(){
 			//每点击一次left+1
 			left++;
