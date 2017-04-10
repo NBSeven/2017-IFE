@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>任务八：JavaScript和树（二）</title>
+	<style>
+		.container{
+			display: flex;
+			flex-flow: row nowrap;
+			align-items: center;
+			justify-content: space-around;
+			width: 1000px;
+			height: 100px;
+			border:1px solid black;
+			text-align: center;
+		}
+		.container_item{
+			display: flex;
+			flex-flow: row nowrap;
+			align-items: center;
+			justify-content: space-around;
+			height: 70%;
+			border:1px solid black;
+			text-align: center;
+			padding: 4px;
+		}
+	</style>
+	<script src="js/main.js"></script>
+</head>
+<body>
+	<div class="container" id="tree">
+		Super
+		<div class="container_item">
+			Car
+			<div class="container_item">
+				Apple
+				<div class="container_item">Pear</div>
+				<div class="container_item">Pig</div>
+				<div class="container_item">Cola</div>
+				<div class="container_item">Soccer</div>
+			</div>
+			<div class="container_item">Phone</div>
+			<div class="container_item">
+				<div class="container_item">Book</div>
+				<div class="container_item">School</div>
+			</div>
+		</div>
+		<div class="container_item">
+			Note
+			<div class="container_item">
+				Human
+				<div class="container_item">Code</div>
+				<div class="container_item">Operate</div>
+				<div class="container_item">Man</div>
+			</div>
+			<div class="container_item">
+				Program
+				<div class="container_item">
+					Element
+					<div class="container_item">Cat</div>
+				</div>
+				<div class="container_item">Glass</div>
+			</div>
+		</div>
+		<div class="container_item">
+			Fish
+		</div>
+	</div>
+	<input type="button" value="前序" id="preButton"></br>
+	<input type="text" id="val"><input type="button" value="搜索" id="search">
+</body>
+</html>
