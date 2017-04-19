@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>正则表达式之入门</title>
+</head>
+<body>
+	<input type="text" id="phone" placeholder="请输入电话号码"></br>
+	<input type="button" id="matchphone" value="Match"></input>
+	<div id="text"></div>
+	<input type="text" id="word" placeholder="请输入两个以上的单词"></br>
+	<input type="button" id="matchword" value="Match"></input>
+	<div id="texta"></div>
+	<script>
+	window.onload=function(){
+		var phone=document.getElementById("phone"),
+			matchphone=document.getElementById("matchphone"),
+			text=document.getElementById("text"),
+			re = /1[34578]\d{9}/;  
+		phone.onblur=function(){
+			if(re.exec(phone.value)){
+				text.innerHTML="号码正确"
+			}else{
+				text.innerHTML="请输入正确的电话号码";
+			}
+		}
+		var word=document.getElementById("word"),
+			matchword=document.getElementById("matchword"),
+			texta=document.getElementById("texta"),
+			rea=/\b([A-Za-z]+)\s+\1\b/;
+			word.onblur=function(){
+				if(rea.exec(word.value)){
+				texta.innerHTML="单词输入有相邻是重复的"
+			}else{
+				texta.innerHTML="没有单词是相邻重复的";
+			}
+			}
+	}
+	</script>
+</body>
+</html>
